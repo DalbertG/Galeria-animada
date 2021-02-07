@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: #2c3e50;
+}
+
+h1{
+    color: #FFF;
+    margin-top: 20px;
+	margin-bottom: 20px;
+    text-align: center;
+    font-size: 80px;
+}
+
+.container-galeria{
+    width: 800px;
+    height: 320px;
+	overflow: hidden;
+	margin: 50px auto;
+	box-shadow: 0 0 10px 1px #000000;
+}
+
+.container-galeria li{
+    position: relative;
+	display: block;
+	width: 160px;
+	float: left;
+	box-shadow: 0 0 25px 10px #000000;
+	transition: all 0.5s;
+}
+
+.container-galeria ul:hover li{
+	width: 40px;
+	filter: brightness(50%);
+}
+
+.container-galeria ul li:hover{
+	width: 640px;
+	filter: brightness(100%);
+}
+
+.container-galeria li img{
+	display: block;
+	width: 640px;
+	height: 100%;
+}
+
+.titulo-imagen{
+	background: #000000;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	display: block;
+	transition: all 0.5s ease;
+	animation: cambiar-color 10s linear infinite;
+	background-size: 400% 400%;
+}
+
+@keyframe cambiar-color{
+	0%{
+		background-position: 0%, 50%;
+	}
+	50%{
+		background-position: 100%, 50%;
+	}
+	100%{
+		background-position: 0%, 100%;
+	}
+}
+
+.titulo-imagen a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 20px;
+	font-size: 20px;
+	text-shadow: 0 1px 2px #000000;
+	transition: all 0.5s ease;
+}
+
+.container-galeria ul li:hover .titulo-imagen{
+	top: 0%;
+	box-shadow: 0 0 25px 10px #000000;
+}
+
+.titulo-imagen:hover a{
+	transform: scale(1.1);
+	transition: all 0.5s ease;
+}
+
+.titulo-imagen:active{
+	background: withe;
+}
+
